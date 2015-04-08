@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th , td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+</style>
+<script src= "angular.js"></script>
+
+<script src= "fetch.js"></script>
+</head>
+
+<body ng-app="myApp">
+
+<div ng-controller="NonFollowerCtrl">
+<table>
+<caption>{{ nonFollowers.length }}</caption>
+   <tr>
+      <th>Username</th>
+      <th>Id</th>
+	  <th>FullName</th>
+	<th> DP </th>
+   </tr>
+   <tr ng-repeat="x in nonFollowers">
+      <td>{{ x.Username }}</td>
+      <td>{{ x.Id }}</td>
+	  <td>{{ x.Fullname }}</td>
+	<td>   <img src="{{ x.Pic }}"</td>
+
+	
+   </tr>
+</table>
+</div>
+
+<br>
+<hr>
+<br>
+
+<div ng-controller="FansCtrl">
+
+<caption>{{ fans.length }}</caption>
+
+<table>
+   <tr>
+      <th>Username</th>
+      <th>Id</th>
+	  <th>FullName</th>
+	<th> DP </th>
+   </tr>
+   <tr ng-repeat="y in fans">
+      <td>{{ y.Username }}</td>
+      <td>{{ y.Id }}</td>
+	  <td>{{ y.Fullname }}</td>
+	<td>   <img src="{{ y.Pic }}"</td>
+
+	
+   </tr>
+</table>
+</div>
+
+</body>
+</html>

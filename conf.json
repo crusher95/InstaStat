@@ -1,0 +1,33 @@
+{
+
+"insta_app" : {
+    "client_id": "",
+    "client_secret": "",
+    "redirect_uri": ""
+},
+
+  "webconfig": {
+    "host": "0.0.0.0",
+    "port": "5000",
+    "debug": "False",
+    "ServerHeaders": {
+      "Server": "Private Server",
+      "XSS-protection": "True",
+      "CSRF": "Blocked"
+    }
+
+  },
+  
+  "json_header" : {"server" : "Confidential", "Content-Type" : "application/json","mimetype" : "application/json"},
+
+  "html_header" : {"server" : "Confidential", "Content-Type" : "text/html","mimetype" : "text/html", "XSS" : "Secured"},
+
+  "storage" : "tokens.json",
+
+  "white_listed" : [
+    "ninjatrench"
+  ],
+
+  "user_log" : "user_info.json"
+
+}

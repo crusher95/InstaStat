@@ -1,0 +1,163 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>The InstaApp</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/spinner.css">
+    <link rel="stylesheet" type="text/css" href="css/reload.css">
+    <link rel="stylesheet" type="text/css" href="css/follow.css">
+
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+	<meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
+    <script src= "js/angular.js"></script>
+    <script src= "js/fetch.js"></script>
+    <script src= "js/directive.js"></script>
+<!--    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+
+
+</head>
+
+<body ng-app="myApp">
+
+
+	<div class="profile">
+            <div ng-controller="UserProfile">
+
+		<img src="{{ user_detail.pic }}" align="left">
+		<div class="details">
+		<p align="right">UserName: <span id="username">{{ user_detail.username}}</span>
+            <br>
+            Name : <span id="name">{{ user_detail.name}}</span>
+			<br>
+            Bio : <span id="bio">{{ user_detail.bio}}</span>
+            <br>
+			Followers:<span id="followers">{{user_detail.counts.followed_by}}</span>
+			<br>
+			Following:<span id="following">{{user_detail.counts.follows}}</span></p>
+		</div>
+	</div>
+        </div>
+
+    <div class="table-title"><font color="black">
+<h3>Quick-Stat : Official Instagram Statistics generator </h3>
+        </font></div>
+
+
+    <div ng-controller="NonFollowerCtrl" >
+
+
+  <section align="center">
+      <h4>Non-Follower : People whom you are following, but they are not following back, UnFollow them :P</h4>
+      <a class="button_example" data-ng-click="reload()" href="#">Refresh</a>
+      &nbsp;&nbsp;&nbsp;Filter Box :&nbsp;<input type="search" ng-model="q" placeholder="Search.." />
+      <br>
+</section>
+
+
+<table class="table-fill" id="NonFollowers">
+    <caption> Total Non-Followers : {{ length }}</caption>
+          <center></center>
+
+
+<thead>
+<tr>
+    <th class="text-left">Sr</th>
+
+<th class="text-left">Name</th>
+<th class="text-left">Profile Picture</th>
+<th class="text-left">Username</th>
+<th class="text-left">UnFollow</th>
+
+</tr>
+</thead>
+<tbody class="table-hover">
+
+<tr ng-repeat="x in nonFollowers | filter:q" >
+
+    <td class="text-left">{{$index + 1}}</td>
+    <td class="text-left">{{ x.Fullname }} </td>
+    <td class="text-left"><img src="{{ x.Pic }}" style="width:30%;"></td>
+    <td class="text-left">{{ x.Username }}</td>
+    <td class="text-left">
+        <div id={{x.Id}}>
+        <button class="btn btn-danger" id={{x.Id}} onclick="uf(this)">{{unfollow_button}}</button>
+            </div>
+    </td>
+
+   </tr>
+
+</tbody>
+</table>
+
+        <div class="spinner" ng-show="loading">
+  <div class="rect1"></div>
+  <div class="rect2"></div>
+  <div class="rect3"></div>
+  <div class="rect4"></div>
+            </div>
+
+</div>
+
+
+<br><br><br><br><br><br>
+
+
+
+<div ng-controller="FansCtrl" >
+
+
+  <section align="center">
+            <h4>Fans : People who are following you, but you are not ;)</h4>
+
+      <a class="button_example" data-ng-click="reload()" href="#">Refresh</a>
+      &nbsp;&nbsp;&nbsp;Filter Box :&nbsp;<input type="search" ng-model="q" placeholder="Search.." />
+      <br>
+</section>
+
+
+<table class="table-fill" id="Fans">
+    <caption> Total Fans : {{ length }}</caption>
+          <center></center>
+
+
+<thead>
+<tr>
+    <th class="text-left">Sr</th>
+
+<th class="text-left">Name</th>
+<th class="text-left">Profile Picture</th>
+<th class="text-left">Username</th>
+<th class="text-left">UnFollow</th>
+
+</tr>
+</thead>
+<tbody class="table-hover">
+
+<tr ng-repeat="x in fans | filter:q" >
+
+    <td class="text-left">{{$index + 1}}</td>
+    <td class="text-left">{{ x.Fullname }} </td>
+    <td class="text-left"><img src="{{ x.Pic }}" style="width:30%;"></td>
+    <td class="text-left">{{ x.Username }}</td>
+    <td class="text-left">
+        <div id={{x.Id}}>
+        <button class="btn btn-success" id={{x.Id}} onclick="f(this)">{{follow_button}}</button>
+            </div>
+    </td>
+
+   </tr>
+
+</tbody>
+</table>
+
+        <div class="spinner" ng-show="loading">
+  <div class="rect1"></div>
+  <div class="rect2"></div>
+  <div class="rect3"></div>
+  <div class="rect4"></div>
+            </div>
+
+</div>
+
+
+</body>

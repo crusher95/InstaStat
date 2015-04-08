@@ -1,0 +1,15 @@
+var app = angular.module('myApp', []);
+
+
+app.controller('NonFollowerCtrl', function($scope, $http) {
+  $http.get("http://localhost:5000/dashboard/non_followers")
+  .success(function (response) {$scope.nonFollowers = response;});
+
+
+});
+	
+app.controller('FansCtrl', function($scope, $http) {
+  $http.get("http://localhost:5000/dashboard/fans")
+  .success(function (response) {$scope.fans = response;});
+
+

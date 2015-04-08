@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Quick-Stat : The InstaApp</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+</head>
+<body lang="en">
+
+<br>
+<br>
+<br>
+<br>
+
+    <div id="login-form">
+
+        <h3>..:: Quick Stat ::.. <br>An statistical app for your Instagram account</h3>
+
+        <fieldset>
+
+            <form action="javascript:void(0);" method="post">
+                
+                <a href="{{ authUrl }}" class="insta"><img src="img/instagram_button.png" class="insta"></a>
+               
+
+            </form>
+
+        </fieldset>
+
+    </div>
+
+<div class="inner">
+             <section class="copyright"><a href="http://SecurityLabs.in">SecurityLabs</a>, made with <3 from India.</section>
+        </div>
+
+</body>
+</html>
