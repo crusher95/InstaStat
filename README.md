@@ -5,7 +5,6 @@ Statistics of Instagram accounts, Know you unfollowers and Fans
 http://apps.securitylabs.in/
 
 # Description :
------
 
 - Completely written in Flask micro framework
 - RESTful API to get listof followers, unfollowers and user details
