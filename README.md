@@ -1,6 +1,9 @@
 # InstaStat
 Statistics of Instagram accounts, Know you unfollowers and Fans
 
+#Authors
+Harsh Daftary https://github.com/ninjatrench/
+Utkarsh Dhawan https://github.com/crusher95
 #Live Demo at :
 http://apps.securitylabs.in/
 
