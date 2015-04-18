@@ -1,3 +1,7 @@
+[ ![Build Status] [travis-image] ] [travis]
+[ ![Release] [release-image] ] [releases]
+[ ![License] [license-image] ] [license]
+
 # InstaStat
 Statistics of Instagram accounts, Know you unfollowers and Fans
 
