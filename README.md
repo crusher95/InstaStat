@@ -1,4 +1,4 @@
-[ ![License] [license-image] ] [license]
+![love](https://img.shields.io/badge/made%20with-%3C3-orange.svg)
 
 # InstaStat
 Statistics of Instagram accounts, Know you unfollowers and Fans
