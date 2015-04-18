@@ -1,4 +1,6 @@
 ![love](https://img.shields.io/badge/made%20with-%3C3-orange.svg)
+[![devDependency Status](https://img.shields.io/david/dev/twbs/bootstrap.svg?style=flat)](https://david-dm.org/twbs/bootstrap#info=devDependencies)
+
 
 # InstaStat
 Statistics of Instagram accounts, Know you unfollowers and Fans
