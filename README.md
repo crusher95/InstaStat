@@ -1,5 +1,3 @@
-[ ![Build Status] [travis-image] ] [travis]
-[ ![Release] [release-image] ] [releases]
 [ ![License] [license-image] ] [license]
 
 # InstaStat
