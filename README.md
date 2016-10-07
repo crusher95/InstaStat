@@ -3,7 +3,7 @@
 
 
 # InstaStat
-Statistics of Instagram accounts, Know you unfollowers and Fans
+Statistics of Instagram accounts, Know you unfollowers and Fans.
 
 #Authors
 Harsh Daftary https://github.com/ninjatrench/
